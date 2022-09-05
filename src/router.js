@@ -6,6 +6,7 @@ function Router() {
     return <div>
         <Route path="/index" component={Index}/>
     </div>
+
 }
 
 export default Router
