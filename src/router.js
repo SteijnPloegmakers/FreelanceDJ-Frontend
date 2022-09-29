@@ -4,7 +4,7 @@ import Index from "./components/pages/home";
 
 function Router() {
     return <div>
-        <Route path="/index" component={Index}/>
+        <Route path="/" component={Index}/>
     </div>
 
 }
