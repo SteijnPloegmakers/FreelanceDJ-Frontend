@@ -34,7 +34,7 @@ function DJCard() {
                     <Card.Title>DJ #3</Card.Title>
                     <Card.Text>
                         Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
+                        bulk of the card's contents.
                     </Card.Text>
                     <Button variant="primary">Go to DJ's page</Button>
                 </Card.Body>
@@ -45,7 +45,7 @@ function DJCard() {
                     <Card.Title>DJ #4</Card.Title>
                     <Card.Text>
                         Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
+                        bulk of the card's contents.
                     </Card.Text>
                     <Button variant="primary">Go to DJ's page</Button>
                 </Card.Body>
@@ -56,7 +56,7 @@ function DJCard() {
                     <Card.Title>DJ #5</Card.Title>
                     <Card.Text>
                         Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
+                        bulk of the card's contents.
                     </Card.Text>
                     <Button variant="primary">Go to DJ's page</Button>
                 </Card.Body>
