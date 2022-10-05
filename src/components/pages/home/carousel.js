@@ -10,7 +10,7 @@ export default function Carousel() {
             <MDBCarouselItem
                 className='w-100 d-block'
                 itemId={1}
-                src='https://img.freepik.com/premium-photo/dj-mixer-booth-background-dance-floor_118086-4743.jpg?w=2000'
+                src='https://wallpaperaccess.com/full/1909755.jpg'
                 alt='...'
             />
             <MDBCarouselItem
@@ -22,7 +22,7 @@ export default function Carousel() {
             <MDBCarouselItem
                 className='w-100 d-block'
                 itemId={3}
-                src='https://media.istockphoto.com/photos/console-picture-id1205334948?k=20&m=1205334948&s=612x612&w=0&h=Bp6ufnx0rmkSWlzKsoP-sdPxsOZZgI5dZQLWoRLFiKs='
+                src='https://c4.wallpaperflare.com/wallpaper/164/751/662/dj-wallpaper-preview.jpg'
                 alt='...'
             />
         </MDBCarousel>
