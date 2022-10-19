@@ -3,7 +3,7 @@ import Index from "./components/pages/home";
 import DJCard from "./components/pages/dj/djcard";
 
 
-function Router() {
+function DJRouter() {
     return <div>
         <Route path="/index" component={Index}/>
         <Route path="/djs" component={DJCard}/>
@@ -11,4 +11,4 @@ function Router() {
 
 }
 
-export default Router
+export default DJRouter

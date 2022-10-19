@@ -1,0 +1,33 @@
+.column{
+    width: 100%;
+}
+
+.image{
+    width: 20%;
+    border-radius: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+}
+
+.djContainer{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+    border-radius: 5%;
+    width: 80%;
+    display: flex;
+    border: 0;
+}
+
+.text{
+    margin-left: 3%;
+}
+
+.price{
+    margin-top: 2%;
+    margin-left: 3%;
+}
+
+.djName{
+    margin-top: 5%;
+}

@@ -1,5 +1,5 @@
 import './App.css';
-import Router from "./router";
+import DJRouter from "./router";
 import DJNavbar from "./components/pages/shared/navbar";
 function App() {
   return (
@@ -7,7 +7,7 @@ function App() {
     <div className="App">
         <DJNavbar/>
       <div className="content">
-        <Router/>
+        <DJRouter/>
       </div>
     </div>
   );
