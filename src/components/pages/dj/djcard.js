@@ -1,6 +1,6 @@
 import "./Styling/djcard.css"
-import axios from "axios";
 import React from "react";
+//import axios from "axios";
 
 export default class DJCard extends React.Component{
 
@@ -28,7 +28,6 @@ export default class DJCard extends React.Component{
                                         <p>{dj.description}</p>
                                     </div>
                                     <div className="price">{dj.price}</div>
-                                    <div>walkout</div>
                                 </div>
                             )
                         })}
