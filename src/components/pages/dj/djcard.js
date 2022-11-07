@@ -1,19 +1,40 @@
 import "./Styling/djcard.css"
+import axios from "axios";
+import React from "react";
 
-function DJCard() {
-    return (
-        <div>
-            <div className="column">
-                <button className="djContainer">
-                    <img className="image" src="https://wallpaperaccess.com/full/1909755.jpg" alt=""/>
-                    <div className="text">
-                        <h4 className="djName"> DJ Steijn</h4><br/>
-                        <p>Tech House, House, Deep House, Big Room</p>
+export default class DJCard extends React.Component{
+
+    state = {
+        djs: []
+    }
+
+    componentDidMount() {
+        axios.get(`https://localhost:7284/api/djaccount`)
+            .then(res => {
+                this.setState({djs: res.data})
+            })
+    }
+
+        render() {
+            return (
+                <div>
+                    <div className="column">
+                        {this.state.djs.map((dj) => {
+                            return(
+                                <div className="djContainer">
+                                    <img className="image" src="https://wallpaperaccess.com/full/1909755.jpg" alt=""/>
+                                    <div className="text">
+                                        <h4 className="djName">{dj.name}</h4><br/>
+                                        <p>{dj.description}</p>
+                                    </div>
+                                    <div className="price">{dj.price}</div>
+                                </div>
+                            )
+                        })}
                     </div>
-                    <div className="price">$12,50</div>
-                </button>
-            </div>
-        </div>
-    )}
+                </div>
+            )
+        }
 
-export default DJCard;
+
+}
