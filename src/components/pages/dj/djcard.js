@@ -28,6 +28,7 @@ export default class DJCard extends React.Component{
                                         <p>{dj.description}</p>
                                     </div>
                                     <div className="price">{dj.price}</div>
+                                    <div>walkout</div>
                                 </div>
                             )
                         })}
