@@ -1,6 +1,6 @@
 import "./Styling/djcard.css"
 import React from "react";
-//import axios from "axios";
+import axios from "axios";
 
 export default class DJCard extends React.Component{
 
