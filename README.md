@@ -1,4 +1,4 @@
-[![Test, build and push to Dockerhub](https://github.com/SteijnPloegmakers/FreelanceDJ-Frontend/actions/workflows/node.js.yml/badge.svg)](https://github.com/SteijnPloegmakers/FreelanceDJ-Frontend/actions/workflows/node.js.yml)
+[![Test, Build and Push to Dockerhub](https://github.com/SteijnPloegmakers/FreelanceDJ-Frontend/actions/workflows/node.js.yml/badge.svg)](https://github.com/SteijnPloegmakers/FreelanceDJ-Frontend/actions/workflows/node.js.yml)
 
 # FreelanceDJ - Frontend
 
