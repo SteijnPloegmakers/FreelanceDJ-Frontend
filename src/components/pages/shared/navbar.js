@@ -14,10 +14,9 @@ function DJNavbar() {
                         <Nav.Link href="http://localhost:3000/index">Home</Nav.Link>
                         <Nav.Link href="http://localhost:3000/djs">Hire a DJ</Nav.Link>
                         <NavDropdown title="Account" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Register as a Costumer</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Register as a DJ</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.2">Register for place as DJ</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.3">
+                            <NavDropdown.Item href="http://localhost:3000/login">
                                 Login
                             </NavDropdown.Item>
                         </NavDropdown>
