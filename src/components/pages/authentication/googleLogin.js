@@ -1,14 +1,23 @@
 import {useEffect, useState} from "react";
 import jwtDecode from "jwt-decode";
+import axios from "axios";
 
 export default function GoogleLogin(){
     const [user, setUser] = useState({});
 
     function handleCallBackResponse(response){
         console.log("Encoded JWT ID token: " + response.credential )
-        var userObject = jwtDecode(response.credential)
+        let userObject = jwtDecode(response.credential)
         console.log(userObject)
-        setUser(userObject)
+
+        const formData = new FormData();
+        formData.append("name", userObject.name)
+        formData.append("email", userObject.email)
+
+        axios.post("https://localhost:7023/api/user", { formData
+        }).then(response => {
+            setUser(response.data)
+        })
         document.getElementById("signInDiv").hidden = true;
     }
 
