@@ -16,7 +16,7 @@ function DJNavbar() {
                         <NavDropdown title="Account" id="basic-nav-dropdown">
                             <NavDropdown.Item href="#action/3.2">Register for place as DJ</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="http://localhost:3000/">
+                            <NavDropdown.Item href="http://localhost:3000/login">
                                 Login
                             </NavDropdown.Item>
                         </NavDropdown>
