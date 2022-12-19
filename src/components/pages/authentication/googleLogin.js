@@ -1,58 +1,43 @@
-import {useEffect, useState} from "react";
+import React from 'react';
+import {GoogleLogin} from "@react-oauth/google";
 import jwtDecode from "jwt-decode";
-import axios from "axios";
+import {useHistory} from "react-router-dom";
 
-export default function GoogleLogin(){
-    const [user, setUser] = useState({});
+function Login() {
 
-    function handleCallBackResponse(response){
-        console.log("Encoded JWT ID token: " + response.credential )
-        let userObject = jwtDecode(response.credential)
+    const history = useHistory()
+
+    const onSuccess = (res) => {
+        console.log("Login success!")
+        const userObject = jwtDecode(res.credential)
         console.log(userObject)
 
         const formData = new FormData();
         formData.append("name", userObject.name)
         formData.append("email", userObject.email)
 
-        axios.post("https://localhost:7023/api/user", { formData
-        }).then(response => {
-            setUser(response.data)
-        })
-        document.getElementById("signInDiv").hidden = true;
+        const requestOptions = {
+            method: 'POST',
+            headers: {'Content-Type': 'multipart/form-data'},
+            body: formData
+        }
+
+        fetch("https://localhost:7023/api/user",
+            requestOptions).then(response => response.json())
+        history.push("/djs")
+    }
+    const onFailure = (res) => {
+        console.log("Login failure! res:", res)
     }
 
-    function handleSignOut(event){
-        setUser({});
-        document.getElementById("signInDiv").hidden = false;
-    }
+    return <div id="signInButton">
+        <GoogleLogin
+            buttonText={"Login"}
+            onSuccess={onSuccess}
+            onFailure={onFailure}
+        />
 
-    useEffect(() => {
-        /* global google */
-        google.accounts.id.initialize({
-            client_id: "978816981549-ov3fi596s8gvsv4e2cv96c89msppqijp.apps.googleusercontent.com",
-            callback: handleCallBackResponse
-        });
-
-        google.accounts.id.renderButton(
-            document.getElementById("signInDiv"),
-            {theme: "outline", size: "large"}
-        );
-
-        google.accounts.id.prompt();
-    }, [])
-
-    return(<div>
-            <div id="signInDiv"/>
-            { user &&
-            <div>
-                <img alt="" src={user.picture}/>
-                <h3>{user.name}</h3>
-            </div>
-            }
-            {Object.keys(user).length !== 0 &&
-            <button onClick={(e)=> handleSignOut(e)}>Sign Out</button>
-            }
-        </div>
-
-    )
+    </div>;
 }
+
+export default Login;
