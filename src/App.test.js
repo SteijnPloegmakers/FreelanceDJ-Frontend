@@ -1,5 +1,5 @@
 import {screen, render} from "@testing-library/react";
-import DJCard from "./components/pages/dj/djcard";
+import Djcardlist from "./components/pages/dj/djcard";
 import {rest} from "msw";
 import {setupServer} from "msw/node";
 import React from "react";
@@ -17,21 +17,21 @@ afterEach(() => server.resetHandlers())
 afterAll(() => server.close())
 
 test("It should have the correct Dj called Hardwell",async() => {
-    render(<DJCard/>)
+    render(<Djcardlist/>)
     const djName = await screen.findByText("Hardwell");
     expect(djName).toBeVisible();
 
 })
 
 test("It should have the correct Dj called Hardwell with the description Zieke Techno DJ",async() => {
-    render(<DJCard/>)
+    render(<Djcardlist/>)
     const djName = await screen.findByText("Zieke Techno DJ")
     expect(djName).toBeVisible();
 
 })
 
 test("It should have the correct Dj called Hardwell with the price 4560",async() => {
-    render(<DJCard/>)
+    render(<Djcardlist/>)
     const djName = await screen.findByText(4560)
     expect(djName).toBeVisible();
 
