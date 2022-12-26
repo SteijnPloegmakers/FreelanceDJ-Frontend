@@ -17,8 +17,8 @@ export default function DjCardList(){
     )
 
     return <div>
-        {djs.map((dj) => (
-            <DjCard id={dj.id} name={dj.name} email={dj.email} description={dj.description} phone={dj.phone} price={dj.price}/>
+        {djs.map((dj, key) => (
+            <DjCard id={dj.id} name={dj.name} email={dj.email} description={dj.description} phone={dj.phone} price={dj.price} key={key}/>
         ))}
     </div>
 }

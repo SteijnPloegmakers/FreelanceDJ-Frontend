@@ -17,7 +17,7 @@ export default function DjCard(props)
                             <h4 className="djName">{props.name}</h4><br/>
                             <p>{props.description}</p>
                         </div>
-                        <div className="price">{props.price}</div>
+                        <div className="price">€{props.price}</div>
                     </div>
                 </div>
             </div>
